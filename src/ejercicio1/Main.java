@@ -23,10 +23,13 @@ public class Main {
         System.out.println(pizza3);
         System.out.println(panini1);
         System.out.println(panini2);
-        System.out.println("El total de pizzas pedidas es: "+ Pizza.contadorServidas+
-                " y el total  de pizzas servidas es: "+Pizza.totalPizzas);
+        System.out.println("El total de pizzas pedidas es: "+ Pizza.pizzasPedidas+
+                " y el total  de pizzas servidas es: "+Pizza.pizzasServidas);
 
-        System.out.println("El total de paninis pedidos es: "+ Panini.contadorServidas+
+        System.out.println("El total de paninis pedidos es: "+ Panini.paninisPedidos+
                 " y el total  de paninis servidos es: "+Panini.paninisServidos);
+
+        System.out.println("El total de paninis y pizzas pedidas es: "+ Pizzeria.total+
+                " y el total  de paninis y pizzas servidas es: "+Pizzeria.contadorServidas);
     }
 }

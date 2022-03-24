@@ -5,11 +5,12 @@ public class Pizza extends  Pizzeria {
 
  Tamano tamano;
  public static int pizzasServidas=0;
+    public static int pizzasPedidas=0;
 
     public Pizza(Tipo tipo, Tamano tamano) {
         super(tipo);
         this.tamano = tamano;
-        pizzasServidas++;
+        pizzasPedidas++;
     }
 
     public Tamano getTamano() {
@@ -21,11 +22,17 @@ public class Pizza extends  Pizzeria {
     }
 
     @Override
+    public void servir() {
+        super.servir();
+        pizzasServidas++;
+    }
+
+    @Override
     public String toString() {
         return "La pizza es: " +
                 "del tamano= " + tamano +
-                "del tipo= " + tipo +
-                "con e estado =" + estado;
+                " del tipo= " + tipo +
+                " con e estado =" + estado;
     }
 }
 

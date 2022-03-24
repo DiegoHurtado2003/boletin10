@@ -1,21 +1,19 @@
 package ejercicio1;
 
-enum Tipo{MARGARITA, FUNGUI, CUATROESTACIONES}
-enum Estado{PEDIDA, SERVIDA}
-
 public class Pizzeria {
 
-    //Constructores
-    protected Tipo tipo;
-    protected Estado estado;
-    protected static int totalPizzas=0;
-    protected static int contadorServidas=0;
 
-    public Pizzeria() {totalPizzas++;}
+    public Tipo tipo;
+    public Estado estado;
+    public static int total=0;
+    public static int contadorServidas=0;
+
+//Constructores
 
     public Pizzeria(Tipo tipo) {
         this.tipo = tipo;
         this.estado = Estado.PEDIDA;
+        total++;
     }
 
 
@@ -39,7 +37,7 @@ public class Pizzeria {
 
     //metodos
 
-    protected void servir(){
+    public void servir(){
         this.estado=Estado.SERVIDA;
         contadorServidas++;
     }

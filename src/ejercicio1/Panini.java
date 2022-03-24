@@ -7,6 +7,7 @@ public class Panini extends Pizzeria {
     TamanoPanini tamano;
     Racion racion;
     public static int paninisServidos=0;
+    public static int paninisPedidos=0;
 
 
 
@@ -14,6 +15,7 @@ public class Panini extends Pizzeria {
         super(tipo);
         this.tamano = tamano;
         this.racion = racion;
+        paninisPedidos++;
     }
 
     public TamanoPanini getTamano() {
@@ -38,7 +40,7 @@ public class Panini extends Pizzeria {
         paninisServidos++;
     }
 
-    @Override
+
     public String toString() {
         return "El panini es:" +
                 " de racion= " + racion +
