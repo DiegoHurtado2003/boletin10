@@ -5,14 +5,11 @@ package Instrumentos;
 
     public class Piano extends Instrumento {
 
-        public static int contadorNotas = 0;
         public static String[] notas = new String[100];
+        public static int contadorNotas = 0;
 
-        /**
-         * Comprueba que hay espacio en el array para introducir una nueva nota
-         *
-         * @return devuelve un booleano que nos dirá si podemos introducir una nueva nota
-         */
+
+
         public boolean Espacio() {
             boolean error = false;
             for (String k : notas) {
@@ -24,10 +21,7 @@ package Instrumentos;
             return error;
         }
 
-        /**
-         * Añade una nota al array
-         * @param nota añade una nota
-         */
+
 
         @Override
         public void add(int nota) {
@@ -72,13 +66,13 @@ package Instrumentos;
         }
 
         /**
-         * Este método escribe por pantalla las notas que el instrumento va a tocar
+         * Imprimir notas a tocar
          */
         @Override
         public void interpretar() {
-            for (String k : notas) {
-                if (k != null) {
-                    System.out.print(k + " ");
+            for (String J : notas) {
+                if (J != null) {
+                    System.out.print(J+" ");
                 }
             }
             System.out.println();
